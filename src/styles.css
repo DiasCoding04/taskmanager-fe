@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Rounded corners for all elements */
+button,
+.mat-mdc-card,
+.mat-mdc-dialog-container,
+.mat-mdc-menu-panel,
+.mat-mdc-snack-bar-container,
+.timepicker,
+.chat-window,
+.task-item,
+.pomodoro-timer {
+  border-radius: 0.5rem !important;
+}
+
+/* Rounded corners for input fields */
+input,
+textarea,
+select,
+.mat-mdc-form-field {
+  border-radius: 0.5rem !important;
+}
+
+/* Smooth hover effects - only for buttons */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Remove focus outline for inputs */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+input,
+textarea,
+select,
+.mat-mdc-card,
+.mat-mdc-form-field,
+.mat-mdc-dialog-container,
+.mat-mdc-menu-panel,
+.mat-mdc-snack-bar-container,
+.timepicker,
+.chat-window,
+.task-item,
+.pomodoro-timer {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation for task items */
+.task-item {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for chat messages */
+.chat-message {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for pomodoro timer */
+.pomodoro-timer {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Custom styles */
+body {
+  @apply bg-gray-100;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

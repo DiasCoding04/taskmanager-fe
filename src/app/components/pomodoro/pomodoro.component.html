@@ -1,0 +1,32 @@
+<div class="bg-white p-6 rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold mb-4 text-yellow-600">Pomodoro Timer</h2>
+  
+  <div class="text-center mb-6">
+    <div class="text-6xl font-bold mb-2" [class.text-yellow-600]="!isBreak" [class.text-green-600]="isBreak">
+      {{ formattedTime }}
+    </div>
+    <div class="text-lg text-gray-600">
+      {{ isBreak ? 'Break Time' : 'Focus Time' }}
+    </div>
+  </div>
+
+  <div class="flex justify-center space-x-4">
+    <button
+      (click)="toggleTimer()"
+      class="px-6 py-2 rounded-lg text-white"
+      [class.bg-yellow-500]="!isRunning"
+      [class.bg-red-500]="isRunning"
+      [class.hover:bg-yellow-600]="!isRunning"
+      [class.hover:bg-red-600]="isRunning"
+    >
+      {{ isRunning ? 'Pause' : 'Start' }}
+    </button>
+    
+    <button
+      (click)="resetTimer()"
+      class="px-6 py-2 rounded-lg bg-gray-500 text-white hover:bg-gray-600"
+    >
+      Reset
+    </button>
+  </div>
+</div>

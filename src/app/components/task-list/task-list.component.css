@@ -1,0 +1,69 @@
+::ng-deep .timepicker {
+  --primary-color: #EAB308 !important;
+  --secondary-color: #FEF3C7 !important;
+  --button-color: #EAB308 !important;
+  --hover-color: #CA8A04 !important;
+  --text-color: #000000 !important;
+}
+
+::ng-deep .timepicker__header {
+  background-color: var(--primary-color) !important;
+}
+
+::ng-deep .timepicker-dial__control {
+  color: var(--text-color) !important;
+}
+
+::ng-deep .timepicker-dial__control:hover {
+  background-color: var(--hover-color) !important;
+}
+
+::ng-deep .timepicker-button {
+  color: var(--button-color) !important;
+}
+
+::ng-deep .timepicker-button:hover {
+  background-color: var(--hover-color) !important;
+}
+
+/* Thay đổi màu số giờ bên cạnh AM/PM */
+::ng-deep .timepicker-overlay {
+  color: white !important;
+}
+
+::ng-deep .timepicker-display {
+  color: white !important;
+}
+
+::ng-deep .timepicker-display__time {
+  color: white !important;
+}
+
+::ng-deep .timepicker-display__time-value {
+  color: white !important;
+}
+
+/* Thay đổi màu kim đồng hồ */
+::ng-deep .clock-face__hand {
+  background-color: black !important;
+}
+
+::ng-deep .clock-face__hand::after {
+  background-color: black !important;
+}
+
+::ng-deep .clock-face__hand::before {
+  background-color: black !important;
+}
+
+::ng-deep .clock-face__hand--hour {
+  background-color: black !important;
+}
+
+::ng-deep .clock-face__hand--minute {
+  background-color: black !important;
+}
+
+::ng-deep .clock-face__hand--second {
+  background-color: black !important;
+}
